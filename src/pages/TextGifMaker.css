@@ -1,0 +1,114 @@
+.tg-upload-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.tg-upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--surface);
+  border: 1.5px dashed rgba(255,255,255,0.15);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text2);
+  font-size: 0.84rem;
+  flex-shrink: 0;
+}
+.tg-upload-btn:hover {
+  border-color: var(--accent2);
+  color: var(--accent2);
+  background: rgba(124,58,237,0.06);
+}
+.tg-upload-thumb {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.tg-upload-btn small {
+  font-size: 0.68rem;
+  color: var(--text3);
+}
+
+/* ─── Text input ──────────────────────────────────────────────────────────── */
+
+.tg-text-input {
+  width: 100%;
+  background: var(--bg2);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.tg-text-input:focus { border-color: var(--accent2); }
+.tg-text-input::placeholder { color: var(--text3); }
+
+/* ─── Color picker row ────────────────────────────────────────────────────── */
+
+.tg-color-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.tg-color-pick {
+  width: 36px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px;
+  background: transparent;
+}
+.tg-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+  padding: 0;
+}
+.tg-swatch:hover {
+  transform: scale(1.2);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* ─── Font chips ──────────────────────────────────────────────────────────── */
+
+.tg-font-chips {
+  flex-wrap: wrap;
+}
+.tg-font-chips .preset-chip {
+  font-size: 0.82rem;
+}
+
+/* ─── Split row ───────────────────────────────────────────────────────────── */
+
+.tg-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.tg-setting-half {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .tg-row-split { grid-template-columns: 1fr; }
+}

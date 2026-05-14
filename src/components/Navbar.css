@@ -1,0 +1,96 @@
+.navbar {
+  background: rgba(18, 18, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+.nav-brand svg { color: var(--accent); }
+.nav-brand strong { color: var(--accent); }
+.nav-brand small {
+  font-size: 0.6rem;
+  background: var(--accent2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  vertical-align: super;
+  font-weight: 600;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav-link {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text2);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.nav-link:hover { color: var(--text); background: var(--surface); }
+.nav-link.active { color: var(--accent); background: rgba(233,69,96,0.1); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  position: absolute;
+  left: 5px;
+  transition: all 0.3s;
+}
+.nav-toggle span { top: 15px; }
+.nav-toggle span::before { content: ''; top: -7px; }
+.nav-toggle span::after { content: ''; top: 7px; }
+.nav-toggle span.open { background: transparent; }
+.nav-toggle span.open::before { top: 0; transform: rotate(45deg); }
+.nav-toggle span.open::after { top: 0; transform: rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--bg2);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    flex-direction: column;
+    padding: 8px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-link { width: 100%; padding: 10px 16px; }
+}

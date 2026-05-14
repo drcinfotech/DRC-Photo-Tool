@@ -1,0 +1,28 @@
+.file-uploader {
+  border: 2px dashed var(--surface3);
+  border-radius: var(--radius);
+  padding: 60px 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: rgba(22, 33, 62, 0.3);
+}
+.file-uploader:hover,
+.file-uploader.dragover {
+  border-color: var(--accent);
+  background: rgba(233, 69, 96, 0.05);
+}
+.upload-icon {
+  margin-bottom: 16px;
+  color: var(--accent);
+}
+.upload-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.upload-hint {
+  font-size: 0.8rem;
+  color: var(--text3);
+}

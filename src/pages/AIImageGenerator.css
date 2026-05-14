@@ -1,0 +1,220 @@
+/* Quick suggestions */
+.ai-suggestions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  flex-wrap: wrap;
+}
+.ai-suggestion-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.ai-suggestion-chips .preset-chip {
+  font-size: 0.68rem;
+  padding: 4px 8px;
+  opacity: 0.7;
+}
+.ai-suggestion-chips .preset-chip:hover {
+  opacity: 1;
+}
+
+.ai-styles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.04);
+  overflow-x: auto;
+}
+.ai-style-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.ai-style-chips .preset-chip.active {
+  border-color: var(--accent2);
+  color: var(--accent2);
+  background: rgba(124,58,237,0.1);
+}
+
+.ai-select {
+  background: var(--bg);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
+.ai-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ai-prompt-input {
+  width: 100%;
+  background: var(--bg2);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  padding: 14px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+}
+.ai-prompt-input:focus { border-color: var(--accent2); }
+.ai-prompt-input::placeholder { color: var(--text3); }
+
+.ai-input-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-edit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ai-edit-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 16px;
+}
+.ai-edit-upload {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ai-edit-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.ai-edit-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+}
+.ai-edit-prompt-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ai-edit-prompt-area .ai-prompt-input {
+  flex: 1;
+}
+
+.ai-error {
+  background: rgba(233,69,96,0.1);
+  border: 1px solid rgba(233,69,96,0.3);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.ai-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.ai-result-img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+}
+
+/* History */
+.ai-history {
+  margin-top: 16px;
+}
+.ai-history h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.ai-history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+.ai-history-card {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.ai-history-card:hover {
+  border-color: var(--accent2);
+  transform: translateY(-2px);
+}
+.ai-history-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+.ai-history-info {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ai-history-prompt {
+  font-size: 0.72rem;
+  color: var(--text2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ai-history-meta {
+  font-size: 0.65rem;
+  color: var(--text3);
+}
+
+/* Before/After Compare */
+.ai-compare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.ai-compare-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.ai-compare-item img {
+  max-width: 400px;
+  max-height: 50vh;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+.ai-compare-arrow {
+  font-size: 2rem;
+  color: var(--accent2);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .ai-edit-grid { grid-template-columns: 1fr; }
+  .ai-history-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .ai-compare { flex-direction: column; }
+  .ai-compare-arrow { transform: rotate(90deg); }
+  .ai-compare-item img { max-width: 100%; }
+}

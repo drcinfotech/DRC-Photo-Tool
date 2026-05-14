@@ -1,0 +1,60 @@
+/* AI Remove BG button */
+.ai-btn {
+  background: linear-gradient(135deg, #7c3aed, #e94560) !important;
+  position: relative;
+  overflow: hidden;
+}
+.ai-btn:hover {
+  background: linear-gradient(135deg, #6d28d9, #d13352) !important;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+}
+.ai-btn:disabled {
+  opacity: 0.6;
+}
+
+/* AI Text Remove button */
+.ai-text-btn {
+  background: linear-gradient(135deg, #0ea5e9, #10b981) !important;
+  position: relative;
+  overflow: hidden;
+}
+.ai-text-btn:hover {
+  background: linear-gradient(135deg, #0284c7, #059669) !important;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+}
+.ai-text-btn:disabled {
+  opacity: 0.6;
+}
+
+/* Processing bar */
+.processing-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(233,69,96,0.15));
+  border: 1px solid rgba(124,58,237,0.3);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.processing-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top-color: var(--accent2);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.tool-hint.processing {
+  border-left-color: var(--accent2);
+  background: rgba(124,58,237,0.08);
+}

@@ -1,0 +1,139 @@
+.sa-root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ─── Main layout ────────────────────────────────────────────────────────────*/
+
+.sa-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ─── Preview column ─────────────────────────────────────────────────────────*/
+
+.sa-preview-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sa-canvas-wrap {
+  background: #ffffff;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.07);
+  overflow: hidden;
+  position: relative;
+}
+
+.sa-canvas {
+  display: block;
+  max-width: 340px;
+  width: 340px;
+  cursor: crosshair;
+  image-rendering: auto;
+}
+
+.sa-pivot-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 2px;
+}
+.sa-pivot-coord {
+  font-size: 0.72rem;
+  color: #f59e0b;
+  font-variant-numeric: tabular-nums;
+}
+.sa-canvas-hint {
+  font-size: 0.7rem;
+  color: var(--text3);
+  text-align: center;
+}
+
+/* ─── Settings column ────────────────────────────────────────────────────────*/
+
+.sa-settings-col {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sa-pivot-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.sa-pivot-axis {
+  min-width: 48px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Quick guide (empty state) ──────────────────────────────────────────────*/
+
+.sa-quick-guide {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.sa-guide-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text2);
+}
+.sa-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.sa-guide-item {
+  background: var(--bg2);
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.sa-guide-item strong {
+  font-size: 0.82rem;
+  color: var(--text);
+}
+.sa-guide-item span {
+  font-size: 0.72rem;
+  color: var(--text3);
+  line-height: 1.4;
+}
+.sa-guide-tip {
+  font-size: 0.8rem;
+  color: var(--accent2);
+  background: rgba(124,58,237,0.08);
+  border: 1px solid rgba(124,58,237,0.2);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+.sa-guide-tip strong {
+  color: #fff;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────────*/
+
+@media (max-width: 780px) {
+  .sa-layout {
+    grid-template-columns: 1fr;
+  }
+  .sa-canvas {
+    width: 100%;
+    max-width: 100%;
+  }
+}
